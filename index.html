@@ -3,58 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>샘플 비즈니스 홈페이지</title>
+  <title>모바일 홍보 페이지</title>
   <style>
     body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
-    header { background: #007aff; color: white; padding: 15px; text-align: center; }
-    .buttons { display: flex; justify-content: space-around; background: #eee; padding: 10px; position: sticky; top: 0; z-index: 999; }
-    .buttons a { padding: 10px 15px; background: #007aff; color: white; text-decoration: none; border-radius: 5px; font-size: 14px; }
+    header { background: #007aff; color: white; padding: 20px; text-align: center; }
+    .top-buttons { position: sticky; top: 0; background: #fff; padding: 10px; display: flex; justify-content: space-around; border-bottom: 1px solid #ccc; z-index: 999; }
+    .top-buttons a { background: #007aff; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 14px; }
     .main-image { width: 100%; height: auto; }
     section { padding: 20px; text-align: center; }
-    .service-box { background: #f9f9f9; margin: 10px 0; padding: 15px; border-radius: 8px; }
-    .kakao { margin: 20px 0; }
-    .kakao a { background: #fae100; padding: 12px 20px; border-radius: 6px; display: inline-block; color: #000; font-weight: bold; text-decoration: none; }
-    footer { background: #222; color: white; padding: 20px; text-align: center; font-size: 13px; }
+    .service-box { background: #f2f2f2; margin: 15px 0; padding: 20px; border-radius: 10px; }
+    .kakao-button { background: #fae100; color: #000; font-weight: bold; padding: 12px 25px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 20px 0; }
+    footer { background: #222; color: white; padding: 20px; text-align: center; font-size: 14px; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>샘플 비즈니스</h1>
-    <p>믿을 수 있는 서비스, 빠른 응답</p>
+    <h1>샘플 업체</h1>
+    <p>고객을 위한 빠르고 신속한 서비스</p>
   </header>
 
-  <div class="buttons">
+  <div class="top-buttons">
     <a href="tel:01012345678">전화걸기</a>
     <a href="sms:01012345678">문자보내기</a>
     <a href="https://map.naver.com/">위치보기</a>
   </div>
 
-  <img src="https://via.placeholder.com/640x300.png?text=메인+배너+이미지" alt="배너 이미지" class="main-image">
+  <img src="images/banner.jpg" alt="배너 이미지" class="main-image">
 
   <section>
-    <h2>서비스 소개</h2>
+    <h2>서비스 안내</h2>
     <div class="service-box">
-      <h3>서비스 A</h3>
-      <p>간단한 설명 문구가 들어갑니다.</p>
+      <h3>서비스 1</h3>
+      <p>고객 맞춤 서비스 제공</p>
     </div>
     <div class="service-box">
-      <h3>서비스 B</h3>
-      <p>추가적인 안내 설명을 여기에 작성할 수 있습니다.</p>
+      <h3>서비스 2</h3>
+      <p>합리적인 가격과 빠른 대응</p>
+    </div>
+    <div class="service-box">
+      <h3>서비스 3</h3>
+      <p>전문가와 함께하는 컨설팅</p>
     </div>
   </section>
 
-  <section class="kakao">
-    <a href="https://pf.kakao.com/_yourkakaolink">카카오톡 문의하기</a>
+  <section>
+    <a href="https://pf.kakao.com/_yourkakaolink" class="kakao-button">카카오톡 문의하기</a>
   </section>
 
   <footer>
-    <p>상호명: 샘플비즈니스 | 대표: 홍길동</p>
-    <p>주소: 서울시 강남구 테헤란로 123</p>
+    <p>상호: 샘플 업체 | 대표: 홍길동</p>
+    <p>주소: 서울시 강남구 예시로 123</p>
     <p>사업자등록번호: 123-45-67890</p>
-    <p>© 2025 Sample Business</p>
+    <p>© 2025 Sample Company</p>
   </footer>
 
 </body>
 </html>
-
