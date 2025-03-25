@@ -3,60 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RaceCompany</title>
+  <title>홈페이지 복제 예제</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
-    header { background: #007aff; color: white; padding: 20px; text-align: center; }
-    .top-buttons { position: sticky; top: 0; background: #fff; padding: 10px; display: flex; justify-content: space-around; border-bottom: 1px solid #ccc; z-index: 999; }
-    .top-buttons a { background: #007aff; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 14px; }
-    .main-image { width: 100%; height: auto; }
-    section { padding: 20px; text-align: center; }
-    .service-box { background: #f2f2f2; margin: 15px 0; padding: 20px; border-radius: 10px; }
-    .kakao-button { background: #fae100; color: #000; font-weight: bold; padding: 12px 25px; text-decoration: none; border-radius: 6px; display: inline-block; margin: 20px 0; }
-    footer { background: #222; color: white; padding: 20px; text-align: center; font-size: 14px; }
+    /* 기본 스타일 커스터마이징 */
+    body { padding-top: 60px; }
+    .navbar { background-color: #f8f9fa; }
+    .section { padding: 60px 0; }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>샘플 업체</h1>
-    <p>고객을 위한 빠르고 신속한 서비스</p>
-  </header>
-
-  <div class="top-buttons">
-    <a href="tel:01012345678">전화걸기</a>
-    <a href="sms:01012345678">문자보내기</a>
-    <a href="https://map.naver.com/">위치보기</a>
-  </div>
-
-  <img src="images/banner.jpg" alt="배너 이미지" class="main-image">
-
-  <section>
-    <h2>서비스 안내</h2>
-    <div class="service-box">
-      <h3>서비스 1</h3>
-      <p>고객 맞춤 서비스 제공</p>
+  <!-- 네비게이션 메뉴 -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">로고</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">갤러리</a></li>
+          <li class="nav-item"><a class="nav-link" href="#greeting">인사말</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">업무안내</a></li>
+          <li class="nav-item"><a class="nav-link" href="#qna">Q&A</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">연락처</a></li>
+          <li class="nav-item"><a class="nav-link" href="#location">오시는길</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="service-box">
-      <h3>서비스 2</h3>
-      <p>합리적인 가격과 빠른 대응</p>
-    </div>
-    <div class="service-box">
-      <h3>서비스 3</h3>
-      <p>전문가와 함께하는 컨설팅</p>
+  </nav>
+
+  <!-- HOME 섹션 -->
+  <section id="home" class="section">
+    <div class="container">
+      <h1 class="text-center">홈페이지 타이틀</h1>
+      <p class="text-center">여기에 홈페이지의 메인 콘텐츠가 들어갑니다.</p>
     </div>
   </section>
 
-  <section>
-    <a href="https://pf.kakao.com/_yourkakaolink" class="kakao-button">카카오톡 문의하기</a>
+  <!-- 갤러리 섹션 -->
+  <section id="gallery" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">갤러리</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="placeholder1.jpg" class="img-fluid" alt="이미지 1">
+        </div>
+        <div class="col-md-4">
+          <img src="placeholder2.jpg" class="img-fluid" alt="이미지 2">
+        </div>
+        <div class="col-md-4">
+          <img src="placeholder3.jpg" class="img-fluid" alt="이미지 3">
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>상호: 샘플 업체 | 대표: 홍길동</p>
-    <p>주소: 서울시 강남구 예시로 123</p>
-    <p>사업자등록번호: 123-45-67890</p>
-    <p>© 2025 Sample Company</p>
+  <!-- 인사말 섹션 -->
+  <section id="greeting" class="section">
+    <div class="container">
+      <h2 class="text-center">인사말</h2>
+      <p>여기에 인사말 내용을 입력하세요.</p>
+    </div>
+  </section>
+
+  <!-- 업무안내 섹션 -->
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">업무안내</h2>
+      <p>여기에 업무안내 관련 내용을 입력하세요.</p>
+    </div>
+  </section>
+
+  <!-- Q&A 섹션 -->
+  <section id="qna" class="section">
+    <div class="container">
+      <h2 class="text-center">Q&A</h2>
+      <p>여기에 자주 묻는 질문 및 답변을 입력하세요.</p>
+    </div>
+  </section>
+
+  <!-- 연락처 섹션 -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">연락처</h2>
+      <p>여기에 연락처 정보를 입력하세요.</p>
+    </div>
+  </section>
+
+  <!-- 오시는길 섹션 -->
+  <section id="location" class="section">
+    <div class="container">
+      <h2 class="text-center">오시는길</h2>
+      <p>오시는길에 대한 정보를 입력하세요.</p>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 홈페이지 예제. All rights reserved.</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
