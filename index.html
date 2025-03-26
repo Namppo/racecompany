@@ -74,6 +74,18 @@
     </div>
   </nav>
 
+  <div id="map" style="width:500px; height:400px;"></div>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=694ba264e0095798b1a5451e4805176e"></script>
+  <script>
+      var container = document.getElementById('map');
+      var options = {
+          center: new kakao.maps.LatLng(33.450701, 126.570667),
+          level: 3
+      };
+      
+      var map = new kakao.maps.Map(container, options);
+  </script>
+
   <!-- 배너(헤더) 섹션 -->
   <section id="home" class="hero-section">
     <div class="container">
@@ -204,6 +216,7 @@
         </div>
       </div>
 
+      
       <!-- 오시는길 섹션 -->
       <div id="location" class="info-card">
         <h2 class="mb-3">오시는길</h2>
