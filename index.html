@@ -5,12 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>안드레인 - 건설업/배관공사</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <style>
     /* 기본 스타일 */
-    body { margin: 0; padding: 0; }
+    body {
+      margin: 0;
+      padding: 0;
+    }
     /* 고정 네비게이션에 따른 상단 여백 */
-    .content-wrapper { padding-top: 56px; }
+    .content-wrapper {
+      padding-top: 56px; /* 네비게이션 높이 */
+    }
     /* 배너(헤더) 섹션 */
     .hero-section {
       position: relative;
@@ -26,12 +34,17 @@
     .hero-section::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: 1;
     }
-    .hero-section .container { position: relative; z-index: 2; }
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
     /* 정보 카드 스타일 */
     .info-card {
       border: 1px solid #ddd;
@@ -41,7 +54,11 @@
       border-radius: 5px;
     }
     /* 지도 영역 */
-    #map { width: 100%; height: 300px; background-color: #eee; }
+    #map {
+      width: 100%;
+      height: 300px;
+      background-color: #eee;
+    }
     /* 푸터 스타일 */
     footer {
       background-color: #f8f9fa;
@@ -49,15 +66,20 @@
       text-align: center;
     }
   </style>
-  <!-- 카카오 지도 API 스크립트: https 사용 --> 
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=694ba264e0095798b1a5451e4805176e"></script>
+  <!-- 카카오 지도 API 스크립트 (JavaScript 키) -->
+  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=694ba264e0095798b1a5451e4805176e"></script>
 </head>
 <body>
   <!-- 상단 네비게이션 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">안드레인_V0.71</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="#">안드레인</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -73,8 +95,6 @@
       </div>
     </div>
   </nav>
-
-  
 
   <!-- 배너(헤더) 섹션 -->
   <section id="home" class="hero-section">
@@ -110,139 +130,4 @@
             </tr>
             <tr>
               <th class="bg-light">소개</th>
-              <td>안드레인은 건설업 기반 배관공사 기업입니다.</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="mt-3 d-flex gap-2">
-          <a href="tel:01087482282" class="btn btn-primary">전화걸기</a>
-          <a href="sms:01087482282" class="btn btn-secondary">SMS 보내기</a>
-        </div>
-      </div>
-
-      <!-- 갤러리 섹션 -->
-      <div id="gallery" class="info-card">
-        <h2 class="mb-3">갤러리</h2>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <img src="images/gallery1.jpg" class="img-fluid" alt="갤러리 이미지 1">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="images/gallery2.jpg" class="img-fluid" alt="갤러리 이미지 2">
-          </div>
-          <div class="col-md-4 mb-3">
-            <img src="images/gallery3.jpg" class="img-fluid" alt="갤러리 이미지 3">
-          </div>
-        </div>
-      </div>
-
-      <!-- 인사말 섹션 -->
-      <div id="greeting" class="info-card">
-        <h2 class="mb-3">인사말</h2>
-        <p>
-          안녕하세요, 안드레인을 방문해 주셔서 감사합니다. 저희는 건설업 기반의 배관공사 전문 업체로서 최고의 서비스를 제공하기 위해 최선을 다하고 있습니다.
-        </p>
-      </div>
-
-      <!-- 업무안내 섹션 -->
-      <div id="services" class="info-card">
-        <h2 class="mb-3">업무안내</h2>
-        <ul>
-          <li>배관 설치 및 수리</li>
-          <li>건물 내 배관 시스템 점검</li>
-          <li>상업 및 주거용 배관 설계</li>
-        </ul>
-      </div>
-
-      <!-- Q&A 섹션 -->
-      <div id="qna" class="info-card">
-        <h2 class="mb-3">Q&A</h2>
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                Q1. 배관공사 비용은 어떻게 되나요?
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                답변: 공사 종류와 규모에 따라 다르므로, 문의 후 견적을 안내해 드립니다.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                Q2. 작업 기간은 얼마나 걸리나요?
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                답변: 작업 내용에 따라 다르며, 평균적으로 1주일에서 2주일 정도 소요됩니다.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- 연락처 섹션 -->
-      <div id="contact" class="info-card">
-        <h2 class="mb-3">연락처</h2>
-        <table class="table table-bordered">
-          <tbody>
-            <tr>
-              <th class="bg-light" style="width: 150px;">전화번호</th>
-              <td>010-8748-2282</td>
-            </tr>
-            <tr>
-              <th class="bg-light">이메일</th>
-              <td>nambbo@nate.com</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="mt-3 d-flex gap-2">
-          <a href="tel:01087482282" class="btn btn-primary">전화걸기</a>
-          <a href="sms:01087482282" class="btn btn-secondary">SMS 보내기</a>
-        </div>
-      </div>
-
-      
-      <!-- 오시는길 섹션 -->
-      <div id="location" class="info-card">
-        <h2 class="mb-3">오시는길</h2>
-        <div id="map">지도 로딩 영역</div>
-        <p class="mt-2">
-          * 실제 지도 API를 사용하려면 스크립트를 추가하고, 위치 좌표 및 줌 레벨을 설정하세요.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 푸터 -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 안드레인. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- 카카오 지도 초기화 스크립트 -->
-  <script>
-    // DOMContentLoaded 이벤트를 사용하여 모든 요소와 스크립트가 로드된 후 실행
-    document.addEventListener("DOMContentLoaded", function() {
-      if (typeof kakao !== 'undefined') {
-        var mapContainer = document.getElementById('map'),
-            mapOption = {
-              // 서울특별시 성북구 고려대로10길 48(안암동3가)의 좌표 (예시, 필요시 정확한 좌표로 수정)
-              center: new kakao.maps.LatLng(37.583, 127.022),
-              level: 3
-            };
-        var map = new kakao.maps.Map(mapContainer, mapOption);
-      } else {
-        console.error("Kakao Maps API failed to load.");
-      }
-    });
-  </script>
-</body>
-</html>
+              <td>안드레인은 건설업 기반 배
