@@ -73,7 +73,7 @@
   <!-- 상단 네비게이션 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">안드레인_V0.1</a>
+      <a class="navbar-brand" href="#">안드레인_V0.2</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -101,6 +101,8 @@
     <div class="container">
       <h1>안드레인</h1>
       <p>건설업 기반 배관공사 전문</p>
+      <p>배관 내시경 전문</p>
+      <p>전국 출장 가능!</p>
     </div>
   </section>
 
@@ -171,6 +173,7 @@
           <li>배관 설치 및 수리</li>
           <li>건물 내 배관 시스템 점검</li>
           <li>상업 및 주거용 배관 설계</li>
+          <li>배관 내시경 검사</li>
         </ul>
       </div>
 
@@ -253,20 +256,20 @@
       // 지도 생성
       var mapContainer = document.getElementById('map'),
           mapOption = {
-            center: new kakao.maps.LatLng(37.5833990, 127.022395), // 좌표
+            center: new kakao.maps.LatLng(37.584035, 127.022516), // 좌표
             level: 3 // 확대 레벨
           };
       var map = new kakao.maps.Map(mapContainer, mapOption);
 
       // 마커 생성
-      var markerPosition = new kakao.maps.LatLng(37.5833990, 127.022395);
+      var markerPosition = new kakao.maps.LatLng(37.584035, 127.022516);
       var marker = new kakao.maps.Marker({
         position: markerPosition
       });
       marker.setMap(map);
 
       // 인포윈도우(말풍선) 내용
-      var iwContent = '<div style="padding:5px;">안드레인인</div>';
+      var iwContent = '<div style="padding:5px;">안드레인</div>';
       var infowindow = new kakao.maps.InfoWindow({
         content: iwContent
       });
