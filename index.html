@@ -16,7 +16,7 @@
       --main-text-color: #ffffff; /* 기본 글자색(흰색) */
       --accent-color: #dc3545;    /* 포인트(빨간) */
     }
-
+  
     body {
       background-color: var(--main-bg-color);
       color: var(--main-text-color);
@@ -24,7 +24,7 @@
       padding: 0;
       font-family: "Noto Sans KR", sans-serif;
     }
-
+  
     /* 네비게이션 바 */
     .navbar {
       background-color: #000; /* 완전 검은색 or 어두운 색 */
@@ -35,12 +35,12 @@
     .nav-link:hover {
       color: var(--accent-color) !important;
     }
-
+  
     /* 메인 배너(히어로 섹션) */
     .hero-section {
       position: relative;
       /* 원하는 배경 이미지를 적용하거나 단색으로 처리 */
-      background: url('images/banner.jpg') center center no-repeat;
+      background: url('images/main.png') center center no-repeat;
       background-size: cover;
       min-height: 70vh;
       display: flex;
@@ -83,7 +83,7 @@
     .hero-btn:hover {
       background-color: #c82333; /* 살짝 어두운 빨간색 */
     }
-
+  
     /* 섹션 타이틀 스타일 */
     .section-title {
       font-size: 1.8rem;
@@ -91,8 +91,8 @@
       margin-bottom: 1.5rem;
       color: #fff;
     }
-
-    /* 배관 시공 / 내시경 검사 소개 섹션 */
+  
+    /* 배관 시공 / 내시경 검사 소개 섹션 (기본 스타일) */
     .dark-section {
       background-color: #1c1c1c;
       padding: 60px 0;
@@ -106,13 +106,13 @@
     .dark-section .card p {
       color: #fff;
     }
-
+  
     /* 강점 섹션 */
     .strength-section {
       background-color: #000; /* 더 짙은 톤 */
       padding: 60px 0;
     }
-
+  
     /* 푸터 */
     footer {
       background-color: #000;
@@ -121,7 +121,7 @@
       color: #aaa;
       font-size: 0.9rem;
     }
-
+  
     /* 링크 색상 */
     a {
       color: var(--accent-color);
@@ -130,7 +130,53 @@
     a:hover {
       color: #fff;
     }
+  
+    /* -----------------------------
+       배관 시공 / 내시경 검사 섹션 추가 스타일
+    ------------------------------ */
+  
+    /* 서비스 항목 (각 컬럼) */
+    .dark-section .service-item {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    /* 서비스 항목 제목 */
+    .dark-section .service-item h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+  
+    /* 목록 스타일 (빨간 불릿 적용) */
+    .custom-bullet {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .custom-bullet li {
+      position: relative;
+      padding-left: 20px; /* 불릿 공간 확보 */
+      margin-bottom: 0.8rem;
+    }
+  
+    .custom-bullet li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color); /* 빨간색 포인트 */
+    }
+  
+    /* 서비스 아이콘 스타일 (Font Awesome 사용 시) */
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+    }
   </style>
+  
 </head>
 <body>
   <!-- 네비게이션 바 -->
@@ -142,7 +188,7 @@
           alt="Race Company Logo"
           style="height: 40px; width: auto; margin-right: 8px;"
         />
-        <span>RACE COMPANY</span>
+        <span><b>RACE COMPANY</b></span>
       </a>
       <button
         class="navbar-toggler"
@@ -172,34 +218,49 @@
     </div>
   </section>
 
+
+
+
+
   <!-- 배관 시공 / 내시경 검사 섹션 -->
   <section id="service" class="dark-section">
     <div class="container">
-      <h2 class="section-title text-center">배관 시공 & 내시경 검사</h2>
-      <div class="row">
+      <h2 class="section-title text-center mb-5">배관 시공 & 내시경 검사</h2>
+      <div class="row text-center">
+        <!-- 왼쪽: 배관 시공 -->
         <div class="col-md-6 mb-4">
-          <div class="card p-4">
-            <h5 class="card-title mb-3">배관 시공</h5>
-            <p class="card-text">
-              - PVC, VP21, CPVC 등 다양한 자재 사용<br>
-              - 오랜 경험과 노하우로 확실한 시공 보장<br>
-              - 철저한 사후관리까지 책임집니다
-            </p>
+          <!-- 아이콘(예: Font Awesome 사용) -->
+          <div class="mb-3">
+            <!-- 원하는 아이콘으로 교체 가능 -->
+            <i class="fas fa-tools text-danger" style="font-size: 40px;"></i>
           </div>
+          <h3 class="fw-bold mb-3">배관 시공</h3>
+          <ul class="custom-bullet">
+            <li>아파트, 오피스텔, 상업용 건물</li>
+            <li>PVC, VP관, CO관 등 다양한 자재 사용</li>
+            <li>설계부터 시공, 점검까지 원스톱 제공</li>
+          </ul>
         </div>
+        <!-- 오른쪽: 내시경 검사 -->
         <div class="col-md-6 mb-4">
-          <div class="card p-4">
-            <h5 class="card-title mb-3">내시경 검사</h5>
-            <p class="card-text">
-              - 전문 장비를 통한 배관 내부 진단<br>
-              - 누수, 결함, 막힘 여부 정확 파악<br>
-              - 빠른 문제 해결과 비용 절감 효과
-            </p>
+          <div class="mb-3">
+            <!-- 원하는 아이콘으로 교체 가능 -->
+            <i class="fas fa-search text-danger" style="font-size: 40px;"></i>
           </div>
+          <h3 class="fw-bold mb-3">내시경 검사</h3>
+          <ul class="custom-bullet">
+            <li>배관 내부 교차/막힘 여부 검사</li>
+            <li>시공 결함 및 누수 지점 정확 파악</li>
+            <li>빠른 문제 해결과 비용 절감 효과</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
+
+
+
+
 
   <!-- 강점 섹션 -->
   <section id="strength" class="strength-section">
